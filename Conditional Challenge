@@ -1,0 +1,67 @@
+/* 
+  1. Store correct answers
+   - When quiz begins, no answers are correct
+*/
+let answer = 0;
+
+// 2. Store the rank of a player
+let rank; 
+
+// 3. Select the <main> HTML element
+const main = document.query('main');
+
+/*
+  4. Ask at least 5 questions
+   - Store each answer in a variable
+   - Keep track of the number of correct answers
+*/
+const answerOne = prompt("Is the power on right now?");
+if (answerOne.toUpperCase() === "YES") {
+    answer += 1;
+  }
+  
+const answerTwo = prompt("Should ERCOT Bd of Dir be prosecuted?");
+if (answerTwo.toUpperCase() === "YES") {
+    answer += 1;
+    }
+    
+const answerThree = prompt("Should the governor of Texas resign in shame?");
+if (answerThree.toUpperCase() === "YES") {
+    answer += 1;
+    }
+    
+const answerFour = ("Should Ted Cruz have stayed in Cancun?");
+if (answerFour.toUpperCase() === "YES") {
+    answer += 1;
+    }
+    
+const answerFive = ("Will you choose to leave Texas ASAP?");
+if (answerFive.toUpperCase() === "YES") {
+    answer += 1;
+    }
+
+
+/*
+  5. Rank player based on number of correct answers
+   - 5 correct = Gold
+   - 3-4 correct = Silver
+   - 1-2 correct = Bronze
+   - 0 correct = No crown
+*/
+if (answer === 5) {
+    rank = "Gold"; 
+    
+} else if (answer >= 3){
+    rank = "Silver";
+    
+} else if (answer >= 2) {
+    rank = "Bronze";
+    
+} else {
+    rank = "None :(";
+    }
+
+// 6. Output results to the <main> element
+main.innerHTML = `<h2>You got ${answer} out of 5 questions correct.</h2>
+<p>Crown earned: <strong>${rank}</strong></p>`
+
