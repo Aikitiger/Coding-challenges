@@ -8,7 +8,7 @@ let answer = 0;
 let rank; 
 
 // 3. Select the <main> HTML element
-const main = document.query('main');
+const main = document.querySelector('main');
 
 /*
   4. Ask at least 5 questions
@@ -16,27 +16,23 @@ const main = document.query('main');
    - Keep track of the number of correct answers
 */
 const answerOne = prompt("Is the power on right now?");
-if (answerOne.toUpperCase() === "YES") {
+if (answerOne.toUpperCase() === 'YES') {
     answer += 1;
   }
-  
 const answerTwo = prompt("Should ERCOT Bd of Dir be prosecuted?");
-if (answerTwo.toUpperCase() === "YES") {
+if (answerTwo.toUpperCase() === 'YES') {
     answer += 1;
     }
-    
 const answerThree = prompt("Should the governor of Texas resign in shame?");
-if (answerThree.toUpperCase() === "YES") {
+if (answerThree.toUpperCase() === 'YES') {
     answer += 1;
     }
-    
 const answerFour = ("Should Ted Cruz have stayed in Cancun?");
-if (answerFour.toUpperCase() === "YES") {
+if (answerFour.toUpperCase() === 'YES') {
     answer += 1;
     }
-    
 const answerFive = ("Will you choose to leave Texas ASAP?");
-if (answerFive.toUpperCase() === "YES") {
+if (answerFive.toUpperCase() === 'YES') {
     answer += 1;
     }
 
@@ -54,7 +50,7 @@ if (answer === 5) {
 } else if (answer >= 3){
     rank = "Silver";
     
-} else if (answer >= 2) {
+} else if (answer >= 1) {
     rank = "Bronze";
     
 } else {
